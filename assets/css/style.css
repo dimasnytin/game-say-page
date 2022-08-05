@@ -239,7 +239,7 @@ body{
 
 .header-bottom.active{
   position: fixed;
-  top: -85px;
+  top: -90px;
   animation: slideIn 0.5s var(--cubic-out) forwards;
 }
 
@@ -391,7 +391,7 @@ body{
   z-index: -1;
 }
 
-/* MAIN STYLE */
+/* СТИЛИ MAIN */
 
 .hero-banner{display: none;}
 
@@ -421,3 +421,174 @@ body{
   color: var(--light-gray-2);
   margin-block-end: 45px;
 }
+
+/* СТИЛИ BRAND */
+.brand {
+  --section-padding: 60px;
+  background-image: var(--gradient);
+}
+
+.brand .has-scrollbar{
+  padding-block-end: 0;
+}
+
+.brand .has-scrollbar::-webkit-scrollbar{
+  display: none;
+}
+
+.has-scrollbar {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding-block-end: 30px;
+  scroll-snap-type: inline mandatory;
+}
+
+.has-scrollbar::-webkit-scrollbar{
+  height: 10px;
+}
+
+.has-scrollbar::-webkit-scrollbar-track{
+  outline: 3px solid var(--marigold);
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb{
+  background-color: var(--marigold);
+}
+
+.has-scrollbar::-webkit-scrollbar-button{
+  width: calc(25% - 40%);
+}
+
+.brand-item {
+  min-width: calc(50% - 10px);
+  scroll-snap-align: start;
+}
+
+.brand-item > img {
+  margin-inline: auto;
+}
+
+/* СТИЛИ LATEST */
+.section-wrapper {
+  position: relative;
+  background-color: var(--white);
+  z-index: 1;
+}
+
+.section-wrapper::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 57%;
+  background-image: url("../images/section-wrapper-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.latest-game .section-title{
+  margin-block-end: 80px;
+}
+
+.section-title,
+.section-subtitle {
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.section-title::after{
+  content: url('../images/title-underline.png');
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.latest-game .has-scrollbar {
+  margin-inline: -15px;
+  padding-inline: 15px;
+  scroll-padding-inline-start: 15px;
+}
+
+.scrollbar-item {
+  min-width: 100%;
+  scroll-snap-align: start;
+}
+
+.latest-game-card {
+  position: relative;
+  box-shadow: var(--shadow-2);
+}
+
+.latest-game-card .card-badge{
+  position: absolute;
+  bottom: 100%;
+  left: 25px;
+}
+
+.latest-game-card .card-title{
+  margin-block-end: 12px;
+  transition: var(--transition);
+}
+
+.latest-game-card .card-title:is(:hover, :focus){
+  color: var(--marigold);
+}
+
+.latest-game-card .card-price{
+  color: var(--silver);
+  font-size: var(--fs-10);
+  font-weight: var(--fw-600);
+}
+
+.latest-game-card .card-price span{
+  margin-inline-start: 5px;
+}
+
+.card-banner {
+  background-color: var(--light-gray-1);
+}
+
+.img-holder {
+  aspect-ratio: var(--width) / var(--height);
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.latest-game .card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--xiketic_90);
+  padding: 35px 25px;
+}
+
+.card-badge {
+  min-height: 30px;
+  color: var(--eerie-black-1);
+  font-size: var(--fs-11);
+  font-weight: var(--fw-700);
+  text-transform: uppercase;
+  max-width: max-content;
+  display: grid;
+  align-items: center;
+  padding-inline: 20px;
+}
+
+.card-badge::before{
+  --skewX: -10deg;
+}
+
+
