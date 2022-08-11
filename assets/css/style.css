@@ -1008,29 +1008,172 @@ body{
   background-color: var(--white);
 }
 
+/* FOOTER СТИЛИ */
+.footer {
+  color: var(--roman-silver);
+}
 
+.footer-top {
+  padding-block-end: var(--section-padding);
+}
 
+.footer-top .container {
+  display: grid;
+  gap: 50px;
+}
 
+.footer .logo {
+  margin-block-end: 35px;
+}
 
+.footer-text,
+.footer .contact-item {
+  font-size: var(--fs-8);
+  font-weight: var(--fw-500);
+  line-height: 1.8;
+}
 
+.footer-text {
+  margin-block-end: 15px;
+}
 
+.contact-item:not(:last-child) {
+  margin-block-end: 10px;
+}
 
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
 
+.contact-icon {
+  margin-block-start: 3px;
+  font-size: 17px;
+}
 
+.footer-list-title {
+  position: relative;
+  color: var(--silver);
+  font-family: var(--ff-oxanium);
+  text-transform: uppercase;
+  font-weight: var(--fw-800);
+  padding-block-end: 20px;
+  margin-block-end: 35px;
+}
+
+.footer-list-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 3px;
+  background-color: var(--marigold);
+}
+
+.footer-link {
+  font-size: var(--fs-9);
+  max-width: max-content;
+  transition: var(--transition);
+  padding-block: 8px;
+  font-weight: var(--fw-500);
+}
+
+.footer-link:is(:hover, :focus) {
+  color: var(--marigold);
+  transform: translateX(5px);
+}
+
+.footer .social-wrapper {
+  margin-block-end: 50px;
+}
+
+.footer .social-list {
+  display: flex;
+  gap: 10px;
+}
+
+.footer .social-link {
+  color: var(--white);
+  padding: 10px;
+  border-radius: 2px;
+}
+
+.footer-newsletter {
+  position: relative;
+}
+
+.footer-newsletter .email-field {
+  background-color: var(--raisin-black-4);
+  padding: 12px 20px;
+  padding-inline-end: 60px;
+  font-size: var(--fs-9);
+  color: var(--white);
+}
+
+.footer-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 53px;
+  background-color: var(--marigold);
+  color: var(--xiketic);
+  display: grid;
+  place-content: center;
+}
+
+.footer-bottom-img {
+  display: none;
+}
+
+.footer-bottom {
+  background-color: var(--eerie-black-2);
+  padding-block: 20px;
+  text-align: center;
+}
+
+.copyright {
+  font-size: var(--fs-9);
+  font-weight: var(--fw-500);
+  line-height: 1.8;
+  color: var(--white);
+}
+
+.copyright-link {
+  display: inline-block;
+  color: var(--marigold);
+}
+
+/* КНОПКА ВВЕРХ СТИЛИ */
+.back-top-btn {
+  position: fixed;
+  bottom: 10px;
+  right: 15px;
+  background-color: var(--marigold);
+  padding: 12px;
+  z-index: 4;
+  transition: var(--transition);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.back-top-btn.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-10px);
+}
 
 
 
 
 /* МЕДИА МОБИЛЬНЫЕ СТИЛИ */
-/**
- * responsive for larger than 576px screen
- */
+/* отзывчивый для экрана размером более 576 пикселей */
 
 @media (min-width: 576px) {
 
-  /**
-   * REUSED STYLE
-   */
+  /* ПОВТОРНО ИСПОЛЬЗУЕМЫЙ СТИЛЬ */
 
   .container {
     max-width: 540px;
@@ -1044,9 +1187,7 @@ body{
 
 
 
-  /**
-   * HEADER
-   */
+  /* HEADER */
 
   .header-actions {
     gap: 40px;
@@ -1074,9 +1215,7 @@ body{
 
 
 
-  /**
-   * SEARCH BOX
-   */
+  /*SEARCH BOX */
 
   .search-container :is(.search-field, .search-submit) {
     font-size: var(--fs-3);
@@ -1084,9 +1223,7 @@ body{
 
 
 
-  /**
-   * BRAND
-   */
+  /* BRAND */
 
   .brand-item {
     min-width: calc(33.33% - 13.33px);
@@ -1094,9 +1231,7 @@ body{
 
 
 
-  /**
-   * FEATURED GAME 
-   */
+  /* FEATURED GAME */
 
   .featured-game .scrollbar-item {
     min-width: 50%;
@@ -1104,9 +1239,7 @@ body{
 
 
 
-  /**
-   * BLOG
-   */
+  /* BLOG */
 
   .blog-list {
     grid-template-columns: 75%;
@@ -1115,9 +1248,7 @@ body{
 
 
 
-  /**
-   * FOOTER
-   */
+  /* FOOTER */
 
   .footer-top .container {
     grid-template-columns: 1fr 1fr;
@@ -1134,15 +1265,11 @@ body{
 
 
 
-/**
- * responsive for larger than 768px screen
- */
+/* отзывчивый для экрана размером более 768 пикселей */
 
 @media (min-width: 768px) {
 
-  /**
-   * REUSED STYLE
-   */
+  /* REUSED STYLE */
 
   .container {
     max-width: 720px;
@@ -1154,9 +1281,7 @@ body{
 
 
 
-  /**
-   * HERO
-   */
+  /* HERO */
 
   .hero-text {
     max-width: 60ch;
@@ -1165,9 +1290,7 @@ body{
 
 
 
-  /**
-   * BRAND
-   */
+  /* BRAND */
 
   .brand-item {
     min-width: calc(25% - 15px);
@@ -1175,9 +1298,7 @@ body{
 
 
 
-  /**
-   * LIVE MATCH
-   */
+  /* LIVE MATCH */
 
   .live-match-banner .play-btn {
     font-size: 120px;
@@ -1189,9 +1310,7 @@ body{
 
 
 
-  /**
-   * BLOG
-   */
+  /* BLOG */
 
   .blog-list {
     grid-template-columns: 1fr 1fr;
@@ -1199,9 +1318,7 @@ body{
 
 
 
-  /**
-   * NEWSLETTER
-   */
+  /* NEWSLETTER */
 
   .newsletter :is(.input-wrapper, .newsletter-btn) {
     margin: 0;
@@ -1226,9 +1343,7 @@ body{
 
 
 
-  /**
-   * FOOTER
-   */
+  /* FOOTER */
 
   .footer-brand,
   .footer-wrapper {
@@ -1252,9 +1367,7 @@ body{
 
 
 
-  /**
-   * BACK TO TOP
-   */
+  /* BACK TO TOP */
 
   .back-top-btn {
     bottom: 50px;
@@ -1267,15 +1380,11 @@ body{
 
 
 
-/**
- * responsive for larger than 992px screen
- */
+/* отзывчивый для экрана размером более 992 пикселей */
 
 @media (min-width: 992px) {
 
-  /**
-   * REUSED STYLE
-   */
+  /* REUSED STYLE */
 
   .container {
     max-width: 960px;
@@ -1291,9 +1400,7 @@ body{
 
 
 
-  /**
-   * HEADER
-   */
+  /* HEADER */
 
   .header-top {
     display: block;
@@ -1410,9 +1517,7 @@ body{
 
 
 
-  /**
-   * HERO
-   */
+  /* HERO*/
 
   .hero {
     text-align: left;
@@ -1435,9 +1540,7 @@ body{
 
 
 
-  /**
-   * BRAND
-   */
+  /* BRAND */
 
   .brand-item {
     min-width: calc(20% - 16px);
@@ -1445,9 +1548,7 @@ body{
 
 
 
-  /**
-   * LATEST GAME
-   */
+  /* LATEST GAME */
 
   .latest-game .has-scrollbar {
     padding-block-end: 0;
@@ -1455,9 +1556,7 @@ body{
 
 
 
-  /**
-   * LIVE MATCH
-   */
+  /* LIVE MATCH */
 
   .live-match-banner {
     max-width: 700px;
@@ -1476,9 +1575,7 @@ body{
 
 
 
-  /**
-   * FEATURED GAME
-   */
+  /* FEATURED GAME */
 
   .featured-game .scrollbar-item {
     min-width: 33.33%;
@@ -1486,9 +1583,7 @@ body{
 
 
 
-  /**
-   * BLOG
-   */
+  /* BLOG */
 
   .blog-list {
     grid-template-columns: repeat(3, 1fr);
@@ -1497,9 +1592,7 @@ body{
 
 
 
-  /**
-   * NEWSLETTER
-   */
+  /* NEWSLETTER */
 
   .newsletter-form {
     max-width: 650px;
@@ -1507,9 +1600,7 @@ body{
 
 
 
-  /**
-   * FOOTER
-   */
+  /* FOOTER */
 
   .footer .container {
     grid-template-columns: 1fr 0.7fr 0.7fr;
@@ -1522,15 +1613,11 @@ body{
 
 
 
-/**
- * responsive for larger than 1200px screen
- */
+/* отзывчивый для экрана размером более 1200 пикселей */
 
 @media (min-width: 1200px) {
 
-  /**
-   * REUSED STYLE
-   */
+  /* ПОВТОРНО ИСПОЛЬЗУЕМЫЙ СТИЛЬ */
 
   .container,
   :is(.header, .hero, .live-match) .container {
@@ -1547,9 +1634,7 @@ body{
 
 
 
-  /**
-   * HEADER
-   */
+  /* HEADER */
 
   .header-bottom::before {
     width: 270px;
@@ -1562,9 +1647,7 @@ body{
 
 
 
-  /**
-   * HERO
-   */
+  /* HERO */
 
   .hero .container {
     grid-template-columns: 1fr 1fr;
@@ -1572,9 +1655,7 @@ body{
 
 
 
-  /**
-   * BRAND
-   */
+  /* BRAND */
 
   .brand-item {
     min-width: calc(16.66% - 16.66px);
@@ -1582,9 +1663,7 @@ body{
 
 
 
-  /**
-   * LIVE MATCH
-   */
+  /* LIVE MATCH */
 
   .section-wrapper::before {
     height: 72%;
@@ -1600,9 +1679,7 @@ body{
 
 
 
-  /**
-   * FEATURED GAME
-   */
+  /* FEATURED GAME */
 
   .featured-game .has-scrollbar {
     padding-block-end: 0;
@@ -1614,9 +1691,7 @@ body{
 
 
 
-  /**
-   * SHOP
-   */
+  /* SHOP */
 
   .shop .has-scrollbar {
     padding-block-end: 15px;
@@ -1624,9 +1699,7 @@ body{
 
 
 
-  /**
-   * NEWSLETTER
-   */
+  /* NEWSLETTER */
 
   .newsletter-card {
     display: flex;
@@ -1645,9 +1718,7 @@ body{
 
 
 
-  /**
-   * FOOTER
-   */
+  /* FOOTER */
 
   .footer .container {
     grid-template-columns: 1fr 0.7fr 0.7fr 1fr;
